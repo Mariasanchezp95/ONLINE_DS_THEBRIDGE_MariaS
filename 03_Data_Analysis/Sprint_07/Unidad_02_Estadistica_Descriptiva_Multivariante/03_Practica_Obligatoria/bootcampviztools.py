@@ -274,3 +274,10 @@ def bubble_plot(df, col_x, col_y, col_size, scale = 1000):
     plt.show()
 
 
+def plot_multiple_boxplots(df, columnas):
+    """
+    Dibuja varios boxplots en una sola figura.
+    """
+    import matplotlib.pyplot as plt
+    df[columnas].plot(kind="box", subplots=True, layout=(1, len(columnas)), figsize=(5*len(columnas), 5))
+    plt.show()
